@@ -63,5 +63,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-    
+
+    public void LoadGameGui()
+    {
+        SceneManager.LoadScene("GameGui");
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+    }
+
+    void Start()
+    {
+        LoadGameGui();
+    }           
 }
